@@ -3,7 +3,6 @@ import Message from "./Message"
 
 export default function App() {
     return <>
-        <h1>List</h1>
-        <ListGroup/>
+        <ListGroup heading="List" items={['Cavinti', 'Sta. Cruz', 'Pagsanjan']}/>
         </>
 }
