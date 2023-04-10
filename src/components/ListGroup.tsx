@@ -1,11 +1,19 @@
+import { useState } from "react";
+
 export default function ListGroup() {
+    let items = ['Cavinti', 'Sta. Cruz' ,'Pagsanjan'];
+
+    const [selectedIndex, setSelectedIndex] = useState(-1);
+
     return (
             <ul className="list-group">
-            <li className="list-group-item">An item</li>
-            <li className="list-group-item">A second item</li>
-            <li className="list-group-item">A third item</li>
-            <li className="list-group-item">A fourth item</li>
-            <li className="list-group-item">And a fifth one</li>
+            {items.length === 0 && <p>No items</p>}
+            {items.map((i, index)=>(
+                        <li key={i} 
+                        onClick={()=>setSelectedIndex(index)} 
+                        className={`list-group-item ${selectedIndex === index && "active"}`}>{i}
+                        </li>
+                        ))}
             </ul>
            );
 }
