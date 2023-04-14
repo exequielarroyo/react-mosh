@@ -5,7 +5,7 @@ interface Props {
     heading: string;
 }
 
-export default function ListGroup({ heading, items}: Props) {
+export default function ListGroup({ heading, items }: Props) {
     const [selectedIndex, setSelectedIndex] = useState(-1);
 
     return (

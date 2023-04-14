@@ -1,8 +1,7 @@
-import ListGroup from "./components/ListGroup"
-import Message from "./Message"
+import ListGroup from "./components/ListGroup";
 
 export default function App() {
     return <>
-        <ListGroup heading="List" items={['Cavinti', 'Sta. Cruz', 'Pagsanjan']}/>
+        <ListGroup heading="Laguna" items={['Cavinti', 'Sta. Cruz', 'Pagsanjan']}/>
         </>
 }
