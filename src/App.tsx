@@ -1,10 +1,12 @@
-import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
+// import ListGroup from "./components/ListGroup";
 
 export default function App() {
-    const handleSelectItem = (item: string) => {
-         console.log(item);
-    }
+    // const handleSelectItem = (item: string) => {
+    //     console.log(item);
+    // }
     return <>
-        <ListGroup heading="Laguna" onSelectItem={handleSelectItem} items={['Cavinti', 'Sta. Cruz', 'Pagsanjan']}/>
+        {/* <ListGroup heading="Laguna" onSelectItem={handleSelectItem} items={['Cavinti', 'Sta. Cruz', 'Pagsanjan']}/> */}
+        <Alert>Hello <span className="text-light">world</span></Alert>
         </>
 }
