@@ -4,11 +4,11 @@ import Button from "./components/Button";
 
 export default function App() {
     const [show, setShow] = useState(false);
-    const handleShow = () => {
-        setShow(prev=>!prev);
+    const handleShow = (visible: boolean) => {
+        setShow(visible);
     }
     return <>
-        <Alert show={show} handleShow={handleShow}>Hello <span className="text-light">world</span></Alert>
-        <Button color="success" onClick={()=>handleShow()}>Click me!</Button>
+        {show && <Alert onClose={()=>handleShow(false)}>Hello world</Alert>}
+        <Button color="success" onClick={()=>handleShow(true)}>Click me!</Button>
         </>
 }

@@ -2,16 +2,15 @@ import { ReactNode, useState } from 'react'
 
 interface Props {
     children: ReactNode;
-    show: boolean;
-    handleShow: () => void;
+    onClose: () => void;
 }
 
-export default function Alert({ children, show, handleShow }: Props) {
+export default function Alert({ children, onClose }: Props) {
 
     return (
-            <div className={`alert alert-primary alert-dismissible fade ${show && 'show'}`} role="alert">
+            <div className={`alert alert-primary alert-dismissible`}>
             <strong>{children}</strong>
-            <button type="button" onClick={handleShow} className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" onClick={onClose} className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
            )
 }
