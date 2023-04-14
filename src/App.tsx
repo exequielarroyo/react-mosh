@@ -1,14 +1,14 @@
+import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
-// import ListGroup from "./components/ListGroup";
 
 export default function App() {
-    // const handleSelectItem = (item: string) => {
-    //     console.log(item);
-    // }
+    const [show, setShow] = useState(false);
+    const handleShow = () => {
+        setShow(prev=>!prev);
+    }
     return <>
-        {/* <ListGroup heading="Laguna" onSelectItem={handleSelectItem} items={['Cavinti', 'Sta. Cruz', 'Pagsanjan']}/> */}
-        <Alert>Hello <span className="text-light">world</span></Alert>
-        <Button color="success" onClick={()=>console.log('helle')}>Click me!</Button>
+        <Alert show={show} handleShow={handleShow}>Hello <span className="text-light">world</span></Alert>
+        <Button color="success" onClick={()=>handleShow()}>Click me!</Button>
         </>
 }
