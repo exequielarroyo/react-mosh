@@ -10,7 +10,7 @@ export default function App() {
     }
     return <>
         <ListGroup items={["Cavinti", 'Pagsanjan']} heading="Hello" onSelectItem={()=>console.log('hello')}/>
-        {/* {show && <Alert onClose={()=>handleShow(false)}>Hello world</Alert>} */}
-        {/* <Button color="success" onClick={()=>handleShow(true)}>Click me!</Button> */}
+        {show && <Alert onClose={()=>handleShow(false)}>Hello world</Alert>}
+        <Button color="primary" onClick={()=>handleShow(true)}>Click me!</Button>
         </>
 }
