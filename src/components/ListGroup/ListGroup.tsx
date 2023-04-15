@@ -32,7 +32,8 @@ export default function ListGroup({ heading, items, onSelectItem }: Props) {
             {items.length === 0 && <p>No items</p>}
             {items.map((i, index)=>(
                         <ListItem key={i} 
-                        onClick={()=>{setSelectedIndex(index); onSelectItem(i)}} active={index === selectedIndex} >
+                        onClick={()=>{setSelectedIndex(index); onSelectItem(i)}} active={index === selectedIndex}
+                        style={{fontWeight: 800}}>
                         {i}
                         </ListItem>
                         ))}
