@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import Like from "./components/Like/Like";
 import ListGroup from "./components/ListGroup";
 
 export default function App() {
@@ -12,5 +13,6 @@ export default function App() {
         <ListGroup items={["Cavinti", 'Pagsanjan']} heading="Hello" onSelectItem={()=>console.log('hello')}/>
         {show && <Alert onClose={()=>handleShow(false)}>Hello world</Alert>}
         <Button color="primary" onClick={()=>handleShow(true)}>Click me!</Button>
+        <Like onClick={()=>console.log('like')}/>
         </>
 }
