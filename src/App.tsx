@@ -5,6 +5,10 @@ import Like from "./components/Like/Like";
 import ListGroup from "./components/ListGroup";
 
 export default function App() {
+    const [person, setPerson] = useState({
+        firstName: "",
+        lastName: "",
+    })
     const [show, setShow] = useState(false);
     const handleShow = (visible: boolean) => {
         setShow(visible);
